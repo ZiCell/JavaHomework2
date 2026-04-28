@@ -2,10 +2,11 @@ package ru.netology.service;
 
 public class CustomsService {
 
-        public static int finalPrice;
+        public static final int PRICE_RATIO = 100;
+        public static final int WEIGHT_RATIO = 100;
         
         public static int calcCustoms(int price, int weight) {
-        finalPrice = price / 100 + weight * 100;
-        return finalPrice;
+           int finalPrice = price / PRICE_RATIO + weight * WEIGHT_RATIO;
+           return finalPrice;
     }
 }
